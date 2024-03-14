@@ -13,9 +13,9 @@ const Home = () => {
 
       <Slider />
 
-<div style={{margin:"0px auto" ,textAlign:"center", alignItems:"center" , display:"flex" , justifyContent:"space-around" ,padding:"30px" , backgroundColor:"#59725cb9"}}>
+<div style={{margin:"0px auto" ,textAlign:"center", alignItems:"center" , display:"flex" , justifyContent:"space-around" ,padding:"30px" , backgroundColor:"#59725cb9", flexWrap:"wrap"}}>
 
-    <img src="/النبذة.jpg" alt="" height={300} />
+    <img src="/النبذة.jpg" alt="" height={300} className='my-2' />
     <div dir='rtl'>
         
 <p className='text-center'> <b>محلات عرفة للعطارة</b>
