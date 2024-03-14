@@ -1,0 +1,7 @@
+.main{
+  background-image: url(/public/img4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+}
