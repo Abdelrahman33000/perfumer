@@ -1,0 +1,6 @@
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    
+    background-color: rgba(74, 206, 29, 0.745) !important;
+    color: black ;
+    border-radius: 13px;
+}
