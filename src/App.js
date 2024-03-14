@@ -5,15 +5,18 @@ import { Home } from './Pages';
 function App() {
   return (
  
-<BrowserRouter>
- <NavBar />
- <Routes>
-  <Route path='/' element={<Home />} />
+<div style={{overflowX:"hidden"}}>
+  <BrowserRouter>
+   <NavBar />
+   <Routes>
+    <Route path='/' element={<Home />} />
+    
+   </Routes>
   
- </Routes>
-
-</BrowserRouter>
-
+  </BrowserRouter>
+  
+  
+</div>
   );
 }
 

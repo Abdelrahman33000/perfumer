@@ -21,7 +21,7 @@ const NavBar = () => {
     <div style={{display:"flex" , gap:"30px" , alignItems:"center" , padding:"10px 30px" }}>
       <img src="/shopping-cart.png" alt="" height={30}  />
 <span style={{ flexGrow:"1"}} />
-      <div className='mt-3' style={{display:"flex" , gap:"30px" , alignItems:"start"  }} dir='rtl'>
+      <div className='mt-3' style={{display:"flex" , gap:"15px" , alignItems:"start"  }} dir='rtl'>
 <Link to={"/"} >
             <span> الرئيسيه </span>
     
@@ -43,10 +43,11 @@ const NavBar = () => {
               border: '1px solid #ccc',
               display: 'flex',
               flexDirection: 'column',
-              width:"15%",
+              width:"50%",
               zIndex:5
             }}
           >
+
             <Link to="#" style={{textDecoration:"none" , color:"#000"}}> <span className='link'>  بهارات </span> </Link>
             <hr className=' m-0' />
             <Link to="#" style={{textDecoration:"none" , color:"#000"}}> <span className='link'>  بقوليات </span> </Link>
