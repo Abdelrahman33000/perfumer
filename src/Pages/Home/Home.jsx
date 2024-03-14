@@ -42,6 +42,24 @@ const Home = () => {
 
 
 
+
+
+<div style={{backgroundColor:"#98a199b8" ,padding:"30px"}}>
+    <h2 className='text-center'> الوصفات </h2>
+<div style={{margin:"0px auto" ,textAlign:"center", alignItems:"center" , display:"flex" , justifyContent:"space-around" ,padding:"30px" , flexWrap:"wrap"}}>
+
+<div dir='rtl'>
+    
+<p className='text-center' > <b>  وصفة ورق العنب  </b>
+</p>
+<br />
+
+<button className='rounded-5 my-5' style={{backgroundColor:"#59725cb9"}}> للمزيد </button>
+</div>
+<img src="/ورق عنب.jpg" alt="" height={300} width={300} className='my-2 rounded-3 shadow-lg' />
+
+</div>  
+</div>
     </div>
   )
 }

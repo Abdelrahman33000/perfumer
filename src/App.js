@@ -1,5 +1,5 @@
 import './App.css';
-import { NavBar } from './Component';
+import { Footer, NavBar } from './Component';
 import { BrowserRouter , Routes , Route } from 'react-router-dom';
 import { Home } from './Pages';
 function App() {
@@ -13,6 +13,7 @@ function App() {
     
    </Routes>
   
+  <Footer />
   </BrowserRouter>
   
   
