@@ -73,7 +73,6 @@ const NavBar = () => {
 
                <Link to="#" style={{textDecoration:"none" , color:"#000"}}> <span className='link'> فواكه مجففة </span> 
                </Link> 
-               {/* <hr  className='m-0 ' /> */}
           </div>
         )}
       </div>
@@ -91,7 +90,7 @@ const NavBar = () => {
       </div>
 
 <Link to={"/"}>
-          <img src="/logaa.jpg" alt="" height={35}  />
+          <img src="/logaa.png" alt="" height={35}  />
     
 </Link>   
 
