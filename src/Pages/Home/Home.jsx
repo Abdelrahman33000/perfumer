@@ -6,12 +6,7 @@ import Swipe2 from '../../Component/Swiper2/Swiper2'
 const Home = () => {
   return (
     <div dir='rtl'>
-      {/* <div className='main'>
-<div style={{display:"flex" , justifyContent:"center" , alignItems:"center" , flexDirection:"column" , height:"100vh"}}>
-    <p style={{fontSize:"30px"}}> <b> محلات عرفه للعطاره  </b></p>
-    <button style={{margin:"200px", border:"1px solid #000"}}> اشترى الأن </button>
-</div>
-      </div> */}
+
 
       <Slider />
 

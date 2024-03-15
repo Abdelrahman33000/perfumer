@@ -29,8 +29,10 @@ const NavBar = () => {
 
 
    <div onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={() => handleMouseLeave()}>
-      <p className='link' style={{cursor:"pointer"}}> الأصناف <img width={15} src="/down-arrow-backup-2-svgrepo-com.svg" alt="" />    </p>
-        {isOpen === 1 && isHovering && (
+<Link to={"/items"}>
+        <p className='link' style={{cursor:"pointer"}}> الأصناف <img width={15} src="/down-arrow-backup-2-svgrepo-com.svg" alt="" />    </p>
+  
+</Link>        {isOpen === 1 && isHovering && (
           <div
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={() => handleMouseLeave()}
