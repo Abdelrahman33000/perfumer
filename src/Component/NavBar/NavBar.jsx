@@ -18,8 +18,8 @@ const NavBar = () => {
   };
 
   return (
-    <div style={{display:"flex" , gap:"30px" , alignItems:"center" , padding:"10px 30px" }}>
-      <img src="/shopping-cart.png" alt="" height={30}  />
+    <div style={{display:"flex" , gap:"20px" , alignItems:"center" , padding:"10px 30px" , backgroundColor:"#59725cb9" }}>
+      <img src="/shopping-cart.png" alt="" height={35}  />
 <span style={{ flexGrow:"1"}} />
       <div className='mt-3' style={{display:"flex" , gap:"15px" , alignItems:"start"  }} dir='rtl'>
 <Link to={"/"} >
@@ -30,7 +30,7 @@ const NavBar = () => {
 
    <div onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={() => handleMouseLeave()}>
 <Link to={"/items"}>
-        <p className='link' style={{cursor:"pointer"}}> الأصناف <img width={15} src="/down-arrow-backup-2-svgrepo-com.svg" alt="" />    </p>
+        <p className='link' style={{cursor:"pointer" ,minWidth:"80px"}}> الأصناف <img width={15} src="/down-arrow-backup-2-svgrepo-com.svg" alt="" />    </p>
   
 </Link>        {isOpen === 1 && isHovering && (
           <div
