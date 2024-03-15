@@ -35,13 +35,7 @@ const Cart = () => {
   return (
     <div className='container shadow-lg  cart1' style={{position:"fixed" , top:"0px" ,left:"0", bottom:"0" , width:"40%" , backgroundColor:"#fff" , zIndex:5 , overflowY:"scroll" , overflowX:"hidden"}}>
     <h1 className='my-5 ' style={{borderBottom:"3px solid #000"}}>SHOPPING CART</h1>
-    {/* <div className='my-5 p-2 ' style={{ display: "flex", justifyContent: "space-between", fontWeight: "bold" , border:"1px solid #434242" , }}> */}
-        {/* <p>Product</p>
-        <p>Price</p>
-        <p >Quantity</p>
-        <p>Subtotal</p> */}
-        {/* <p><BsTrash3 /></p> */}
-      {/* </div> */}
+
 
 
     <div className='pro'>
@@ -51,9 +45,10 @@ const Cart = () => {
               <img src={item.img} alt="Item" width={50} />
               <p>{item.description}</p>
           </div>
-            <p className='me-5' style={{ color: "red" }}>Price: ${item.price}</p>
+            {/* <p className='me-5' style={{ color: "red" }}>Price: ${item.price}</p> */}
             <input className='me-5' type="number" style={{width:"50px"}} value={item.quantity || 1} onChange={(e) => handleQuantityChange(index, e)} />
-            <p className='me-5'>${item.price * (item.quantity || 1)}</p> {/* Multiply price by quantity */}
+            <p className='me-5'>${item.price * (item.quantity || 1)}</p> 
+            {/* Multiply price by quantity */}
             <button onClick={() => removeFromCart(index)}><BsTrash3 /></button>
           </div>
         ))}
