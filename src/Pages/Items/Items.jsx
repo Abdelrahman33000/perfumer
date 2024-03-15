@@ -19,12 +19,18 @@ const Items = () => {
 
 
   return (
-    <div className='row mx-auto d-flex align-items-center py-5 '>
-      {items.map((item)=><div className='col-4   justify-content-center d-flex  mx-auto' key={item.id} style={{flexDirection:"column"}}>
+    <div className='row mx-auto d-flex align-items-center py-5 ' style={{flexWrap:"wrap"}}>
+      {items.map((item)=><div className='col-lg-4   justify-content-center d-flex  mx-auto' key={item.id} style={{ flexWrap:"wrap" ,flexDirection:"column"}}>
 
-<div className='my-5'> <img  className='mx-auto d-flex   ' style={{borderRadius:"50%"}} src={item.img} alt="" width={200}  height={200}/> </div>    
+<div className='my-5'> <img  className='mx-auto d-flex ' style={{borderRadius:"50%"}} src={item.img} alt="" width={200}
+  height={200}/> </div>
     <button className='rounded-5 w-50 mx-auto ' style={{backgroundColor:"#59725cb9" , marginTop:"50px"}}> {item.title} </button>
+  
+  
       </div>)}
+
+
+
     </div>
   )
 }
