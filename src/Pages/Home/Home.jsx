@@ -1,6 +1,8 @@
 import React from 'react'
 import './Home.css'
 import { Slider } from '../../Component'
+import Swipe from '../../Component/Swiper1/Swiper1'
+import Swipe2 from '../../Component/Swiper2/Swiper2'
 const Home = () => {
   return (
     <div dir='rtl'>
@@ -18,7 +20,7 @@ const Home = () => {
     <img src="/النبذة.jpg" alt="" height={300} className='my-2' />
     <div dir='rtl'>
         
-<p className='text-center'> <b>محلات عرفة للعطارة</b>
+<p className='text-center' style={{fontSize:"30px"}}> <b>محلات عرفة للعطارة</b>
  </p>
 <br />
 
@@ -38,10 +40,10 @@ const Home = () => {
     </div>
 </div>
 
+<Swipe />
 
 
-
-
+<Swipe2 />
 
 
 <div style={{backgroundColor:"#98a199b8" ,padding:"30px"}}>
