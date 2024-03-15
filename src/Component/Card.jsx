@@ -3,6 +3,7 @@ import './Card.css';
 import { BsCart3 } from "react-icons/bs";
 
 import { Rating } from 'react-simple-star-rating'
+import { Link } from 'react-router-dom';
 const Card = (props) => {
 
 
@@ -27,6 +28,27 @@ const Card = (props) => {
   };
 
 
+
+
+  const addToCart1 = () => {
+    const existingItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    const isItemInCart = existingItems.some(item => item.img === props.img && item.description === props.description && item.price === props.price1);
+
+    if (!isItemInCart) {
+      const updatedItems = [...existingItems, {
+        img: props.img,
+        description: props.description,
+        price: props.price1
+      }];
+
+      localStorage.setItem('cartItems', JSON.stringify(updatedItems));
+
+    
+    } else {
+      alert('This item is already in your cart!');
+    }
+  };
   const onPointerEnter = () => console.log('Enter')
   const onPointerLeave = () => console.log('Leave')
 
@@ -43,8 +65,10 @@ const Card = (props) => {
       <div className="card-icons ">
         
 
-    <img src="/eye.png" alt="" width={20} />
-      </div>
+<Link to={"/details"}>
+      <img src="/eye.png" alt="" width={20} onClick={addToCart1} />
+  
+</Link>      </div>
 
 
 
@@ -54,7 +78,7 @@ const Card = (props) => {
 <div className='d-flex mx-auto ' style={{scale:".7" , marginRight:"200px" , alignItems:"center"}}>
 
 <Rating 
- onPointerEnter={onPointerEnter}
+ onPointerEnt0er={onPointerEnter}
  onPointerLeave={onPointerLeave}
    />
 </div>
