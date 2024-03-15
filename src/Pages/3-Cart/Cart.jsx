@@ -32,56 +32,64 @@ const Cart = () => {
     }, 0);
   };
 
+
+
+  const [selectedOption, setSelectedOption] = useState('');
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const handleSelectChange = (event) => {
+    const selectedPrice = parseInt(event.target.value);
+    setSelectedOption(event.target.value);
+    setTotalPrice(selectedPrice + calculateSuper());
+  };
+
+
   return (
-    <div className='container shadow-lg  cart1' style={{position:"fixed" , top:"0px" ,left:"0", bottom:"0" , width:"40%" , backgroundColor:"#fff" , zIndex:5 , overflowY:"scroll" , overflowX:"hidden"}}>
-    <h1 className='my-5 ' style={{borderBottom:"3px solid #000"}}>SHOPPING CART</h1>
+    <div  className='container shadow-lg  cart1' style={{position:"fixed" , top:"0px" ,left:"0", bottom:"0" , width:"40%" , backgroundColor:"#fff" , zIndex:5 , overflowY:"scroll" , overflowX:"hidden"}}>
+    <h1 className='my-5  ' dir='rtl' style={{borderBottom:"3px solid #000" , lineHeight:"60px"}}> عربة التسوق</h1>
 
 
 
     <div className='pro'>
         {cartItems.map((item, index) => (
           <div key={index} className='my-5 p-2 pro ' style={{display: "flex", justifyContent: "space-between" , border:"1px solid #434242" , alignItems:"center" }}>
-          <div className='d-flex gap-2 align-items-end '>
-              <img src={item.img} alt="Item" width={50} />
-              <p>{item.description}</p>
+          <div className='d-flex gap-1 align-items-end '>
+              <img src={item.img} alt="Item" width={40} />
+              <p style={{minWidth:"70px"}}>{item.description}</p>
           </div>
             {/* <p className='me-5' style={{ color: "red" }}>Price: ${item.price}</p> */}
-            <input className='me-5' type="number" style={{width:"50px"}} value={item.quantity || 1} onChange={(e) => handleQuantityChange(index, e)} />
-            <p className='me-5'>${item.price * (item.quantity || 1)}</p> 
-            {/* Multiply price by quantity */}
+            <input className='me-2' type="number" style={{width:"50px" ,height:"25px"}} value={item.quantity || 1} onChange={(e) => handleQuantityChange(index, e)} />
+<div className='align-items-end mt-3 d-flex'>
+              <p>شيكل</p>  <p className='me-5'>   {item.price * (item.quantity || 1)}  </p> 
+  
+</div>           
             <button onClick={() => removeFromCart(index)}><BsTrash3 /></button>
           </div>
         ))}
       </div>
-      {/* <div className='d-flex justify-content-between '>
-      <Link to={"/products"}>  <button className='btn btn-outline-dark'>Return To Shop</button></Link>
-       <Link to='#'><button className='btn btn-outline-dark'>Update Cart</button> </Link> 
-      </div> */}
+  
 
-<p className='d-flex  justify-content-between'> Subtotal: <span>{calculateSuper()}</span> </p>
+<p className='d-flex  justify-content-between' dir='rtl'> السعر الكلى : <span>{calculateSuper()} شيكل</span> </p>
 
-      {/* <div className='d-flex justify-content-between my-5 flex-wrap'>
-<div>
-  <input type="text" name="" id="" placeholder='Coupon Code'  className='p-2 me-3'/>
-<button className='btn btn-danger p-2 my-3'>Apply Coupon</button>
-</div>
-<div className='p-3 rounded-5 shadow-lg cart' style={{border:"1px solid #000" ,width:"30%"}}>
-<p><b>Cart Total</b></p>
-<p className='d-flex  justify-content-between'> Subtotal: <span>{calculateSuper()}</span> </p>
-<hr />
-<p className='d-flex  justify-content-between'>Shipping: <span>Free</span></p>
-<hr />
-<p className='d-flex  justify-content-between'> Total: <span>{calculateSuper()}</span></p>
-<br />
-<div className='d-flex  justify-content-center'>
-  <Link  to={{ pathname: '/checkout', state: { cartItems } }}> <button className='btn btn-danger my-3'>Procees to checkout</button> </Link>
-</div>
-</div>
-      </div> */}
 
-       
-
+    <div dir='rtl' className='my-5'>
+      <select className='my-5' style={{fontSize:"12px"}} value={selectedOption} onChange={handleSelectChange}>
+        <option value=""> طلب التوصيل </option>
+        <option value="20">الضفة - 20 شيكل </option>
+        <option value="30">القدس - 30 شيكل</option>
+        <option value="70">الداخل - 70 شيكل</option>
+      </select>
+      {selectedOption && (
+        <p>السعر النهائي:  {totalPrice} شيكل</p>
+      )}
     </div>
+
+<div className='px-5'>
+      <button className='rounded-5 w-100 mx-auto ' style={{backgroundColor:"#39e37d" , marginTop:"50px"}}> أطلب الأن </button>
+  
+</div>    </div>
+
+    
   )
 }
 

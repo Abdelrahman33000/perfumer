@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import { Cart } from '../../Pages';
+import { AiOutlineClose } from "react-icons/ai";
 const NavBar = () => {
 
     
@@ -25,7 +26,15 @@ const NavBar = () => {
         setShowCart(!showCart);
       }
       } />
-{showCart && <Cart /> }
+{showCart && <div className='align-items-center d-flex'>
+  <Cart />
+<span  style={{position:"fixed" , top:"10%",left:"20px" , zIndex:10 , cursor:"pointer"}} >
+    <AiOutlineClose    onClick={() => {
+              setShowCart(!showCart);
+    }
+    } />
+</span>
+</div> }
 
 <span style={{ flexGrow:"1"}} />
       <div className='mt-3' style={{display:"flex" , gap:"15px" , alignItems:"start"  }} dir='rtl'>

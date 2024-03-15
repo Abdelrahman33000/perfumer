@@ -52,7 +52,7 @@ const Card = (props) => {
     setShowPopup(!showPopup);
   };
 
-  const [isRed, setIsRed] = useState(false);
+  // const [isRed, setIsRed] = useState(false);
 
   // const handleClick = () => {
   //   setIsRed(!isRed);
@@ -64,7 +64,7 @@ const Card = (props) => {
          <div> <img src={props.img} alt="Card" className="card-image mb-3" style={{height:"300px"}} /> </div>
    
    
-    <button  className='btn  w-50 mx-auto ' style={{position:"absolute" , top:"58%", right:"0", left:"0" , backgroundColor:"#39e37d"}} onClick={addToCart}> <BsCart3 className='mx-2' /> Add To Cart </button>
+    <button  className='btn  w-50 mx-auto ' style={{position:"absolute" , top:"58%", right:"0", left:"0" , backgroundColor:"#39e37d"}} onClick={addToCart}> <BsCart3 className='mx-2' /> اضافه الى السله </button>
 
 
       <div className="card-icons ">
@@ -76,11 +76,13 @@ const Card = (props) => {
     <img src="/eye.png" alt="" width={20} onClick={togglePopup} />
       </div>
 
-{props.dis && <p className='py-1 px-4 rounded-3' style={{position:"absolute" , top:"0px" , left:"0px" , backgroundColor:"#39e37d" , color:"#fff"}}>{props.dis} </p>
-}      <p className='ps-3 text-start'><b>{props.description}</b></p>
+{/* {props.dis && <p className='py-1 px-4 rounded-3' style={{position:"absolute" , top:"0px" , left:"0px" , backgroundColor:"#39e37d" , color:"#fff"}}>{props.dis} </p>
+}    */}
+
+   <p className='ps-3 text-center '><b>{props.description}</b></p>
 
 
-<div className='d-flex ' style={{scale:".7" , marginRight:"200px" , alignItems:"center"}}>
+<div className='d-flex mx-auto ' style={{scale:".7" , marginRight:"200px" , alignItems:"center"}}>
 
 <Rating 
  onPointerEnter={onPointerEnter}
@@ -88,8 +90,8 @@ const Card = (props) => {
    />
 </div>
 
-   <div className='ps-3' style={{display:"flex ", gap:"10px"}}>
-       <p>${props.price1}</p>
+   <div className='ps-3 mx-auto ' style={{display:"flex ", gap:"10px"}}>
+   شيكل <p > {props.price1}  </p>
        <p style={{textDecoration: 'line-through' , opacity:".5"}}>{props.price2}</p> 
    </div>
 
@@ -106,10 +108,6 @@ const Card = (props) => {
   </div>   
   <br />    
      <p className='text-light mx-auto '><b>{props.description}</b></p>
-        {/* <Rating  className='my-5    d-flex'  
-          onPointerEnter={onPointerEnter}
-          onPointerLeave={onPointerLeave}
-            /> */}
         <p className='text-light mx-auto '>{props.price1}</p>
         <p className='text-light mx-auto  mb-5'>{props.price2}</p>
 </div>

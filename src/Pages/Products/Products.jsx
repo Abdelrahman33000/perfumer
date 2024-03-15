@@ -12,15 +12,15 @@ const Products = () => {
 
    <div className='row  justify-content-between   container my-5 '>
 <div className=" col-lg-4  ">
-       <Card  img="/p (1).jpeg" price1="123" price2="$200" dis="SALE" description="Product Name1" />
+       <Card  img="/p (1).jpeg" price1="123" price2="$200" dis="SALE" description=" اسم المنتج  " />
   
 </div>     
 <div className=" col-lg-4  ">
-  <Card className=" col-lg-2" img="/p (2).jpeg" dis="SALE"  price1="1960" description="lorem"/>
+  <Card className=" col-lg-2" img="/p (2).jpeg" dis="SALE"  price1="1960" description="اسم المنتج "/>
   
 </div>  
 <div className=" col-lg-4 ">
-     <Card className=" col-lg-2" img="/p (3).jpeg" dis="SALE"  price1=" 550"  description="lorem"/>
+     <Card className=" col-lg-2" img="/p (3).jpeg" dis="SALE"  price1=" 550"  description="اسم المنتج "/>
   
 </div>   
 
@@ -37,21 +37,18 @@ const Products = () => {
 
    <div className='row justify-content-between   container my-5 '>
 <div className=" col-lg-4  ">
-       <Card   img="/p (4).jpeg" price1="260"  price2="$360"   description="lorem" dis="SALE"/>
+       <Card   img="/p (4).jpeg" price1="260"  price2="$360"   description="اسم المنتج " dis="SALE"/>
   
 </div>     
 <div className=" col-lg-4  ">
-  <Card className=" col-lg-2" img="/p (5).jpeg"  price1="960"  price2=" $1160"  description="lorem" dis="SALE"/>
+  <Card className=" col-lg-2" img="/p (5).jpeg"  price1="960"  price2=" $1160"  description="اسم المنتج " dis="SALE"/>
   
 </div>  
 <div className=" col-lg-4 ">
-     <Card className=" col-lg-2" img="/p (6).jpeg"  price1=" 160"  price2="$170"  description="lorem" dis="SALE"/>
+     <Card className=" col-lg-2" img="/p (6).jpeg"  price1=" 160"  price2="$170"  description="اسم المنتج " dis="SALE"/>
   
 </div>   
-{/* <div className=" col-lg-3 ">
-    <Card className=" col-lg-2" img="/card4.png"   price1="360"  description="lorem"  />
-  
-</div>  */}
+
 
   </div>
 </div>
@@ -61,19 +58,19 @@ const Products = () => {
 
 <div className='row justify-content-between   container my-5 '>
 <div className=" col-lg-4  ">
-    <Card   img="/p (7).jpeg" price1="260"  price2="$360"  dis="SALE"  description="lorem" />
+    <Card   img="/p (7).jpeg" price1="260"  price2="$360"  dis="SALE"  description="اسم المنتج " />
 
 </div>     
 <div className=" col-lg-4  ">
-<Card className=" col-lg-2" img="/p (8).jpeg"  price1="960" dis="SALE"  price2=" $1160"  description="lorem"/>
+<Card className=" col-lg-2" img="/p (8).jpeg"  price1="960" dis="SALE"  price2=" $1160"  description="اسم المنتج "/>
 
 </div>  
 <div className=" col-lg-4 ">
-  <Card className=" col-lg-2" img="/p (9).jpeg"  price1=" 160" dis="SALE"  price2="$170"  description="lorem"/>
+  <Card className=" col-lg-2" img="/p (9).jpeg"  price1=" 160" dis="SALE"  price2="$170"  description="اسم المنتج "/>
 
 </div>   
 {/* <div className=" col-lg-3 ">
- <Card className=" col-lg-2" img="/card4.png"   price1="360"  description="lorem"  />
+ <Card className=" col-lg-2" img="/card4.png"   price1="360"  description="اسم المنتج "  />
 
 </div>  */}
 
