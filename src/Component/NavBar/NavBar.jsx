@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+import { Cart } from '../../Pages';
 const NavBar = () => {
 
     
@@ -17,9 +18,15 @@ const NavBar = () => {
     setIsHovering(false);
   };
 
+  const [showCart , setShowCart] = useState(null);
   return (
     <div style={{display:"flex" , gap:"20px" , alignItems:"center" , padding:"10px 30px" , backgroundColor:"#59725cb9" }}>
-      <img src="/shopping-cart.png" alt="" height={35}  />
+      <img src="/shopping-cart.png" alt="" height={35} style={{cursor:"pointer"}} onClick={() => {
+        setShowCart(!showCart);
+      }
+      } />
+{showCart && <Cart /> }
+
 <span style={{ flexGrow:"1"}} />
       <div className='mt-3' style={{display:"flex" , gap:"15px" , alignItems:"start"  }} dir='rtl'>
 <Link to={"/"} >

@@ -1,8 +1,9 @@
 import React from 'react'
 import './items.css'
+import { Link } from 'react-router-dom'
 const Items = () => {
     const items=[
-        {title:"زيوت طبيعية " , img:"/زيوت .png" , id:"1"},
+        {title:"زيوت طبيعية " , img:"/زيوت .png" , id:"1" },
         {title:" بهارات " , img:"/بهارات .png" , id:"2"},
         {title:" بقوليات" , img:"/بقوليات.png" , id:"3"},
         {title:" بذور" , img:"/بذور.jpg" , id:"4"},
@@ -24,7 +25,13 @@ const Items = () => {
 
 <div className='my-5'> <img  className='mx-auto d-flex ' style={{borderRadius:"50%"}} src={item.img} alt="" width={200}
   height={200}/> </div>
-    <button className='rounded-5 w-50 mx-auto ' style={{backgroundColor:"#59725cb9" , marginTop:"50px"}}> {item.title} </button>
+   <Link className='mx-auto w-50' to={"/products"}>
+    <button className='rounded-5 w-100 mx-auto ' style={{backgroundColor:"#59725cb9" , marginTop:"50px"}}> 
+
+    {item.title} 
+    
+    </button>
+   </Link>
   
   
       </div>)}
