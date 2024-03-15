@@ -1,9 +1,9 @@
-.cart{
+.cart1{
 
 }
 @media(max-width:570px){
-    .cart{
-        width: 100% !important;
+    .cart1{
+        width: 80% !important;
         background-color: rgb(210, 220, 220);
         margin: auto;
     }

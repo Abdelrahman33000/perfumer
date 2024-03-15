@@ -33,18 +33,20 @@ const Cart = () => {
   };
 
   return (
-    <div className='container  ' style={{position:"fixed" , top:"80px" , bottom:"0" , width:"25%" , backgroundColor:"#fff" , zIndex:5 , overflowY:"scroll"}}>
-    <h1 className='my-5'>Cart</h1>
-    <div className='my-5 p-2 ' style={{ display: "flex", justifyContent: "space-between", fontWeight: "bold" , border:"1px solid #434242" , }}>
-        <p>Product</p>
+    <div className='container shadow-lg  cart1' style={{position:"fixed" , top:"0px" ,left:"0", bottom:"0" , width:"40%" , backgroundColor:"#fff" , zIndex:5 , overflowY:"scroll" , overflowX:"hidden"}}>
+    <h1 className='my-5 ' style={{borderBottom:"3px solid #000"}}>SHOPPING CART</h1>
+    {/* <div className='my-5 p-2 ' style={{ display: "flex", justifyContent: "space-between", fontWeight: "bold" , border:"1px solid #434242" , }}> */}
+        {/* <p>Product</p>
         <p>Price</p>
         <p >Quantity</p>
-        <p>Subtotal</p>
+        <p>Subtotal</p> */}
         {/* <p><BsTrash3 /></p> */}
-      </div>
+      {/* </div> */}
+
+
     <div className='pro'>
         {cartItems.map((item, index) => (
-          <div key={index} className='my-5 p-2 pro ' style={{display: "flex", justifyContent: "space-between" , border:"1px solid #434242" , alignItems:"center"}}>
+          <div key={index} className='my-5 p-2 pro ' style={{display: "flex", justifyContent: "space-between" , border:"1px solid #434242" , alignItems:"center" }}>
           <div className='d-flex gap-2 align-items-end '>
               <img src={item.img} alt="Item" width={50} />
               <p>{item.description}</p>
@@ -56,12 +58,14 @@ const Cart = () => {
           </div>
         ))}
       </div>
-      <div className='d-flex justify-content-between '>
+      {/* <div className='d-flex justify-content-between '>
       <Link to={"/products"}>  <button className='btn btn-outline-dark'>Return To Shop</button></Link>
        <Link to='#'><button className='btn btn-outline-dark'>Update Cart</button> </Link> 
-      </div>
+      </div> */}
 
-      <div className='d-flex justify-content-between my-5 flex-wrap'>
+<p className='d-flex  justify-content-between'> Subtotal: <span>{calculateSuper()}</span> </p>
+
+      {/* <div className='d-flex justify-content-between my-5 flex-wrap'>
 <div>
   <input type="text" name="" id="" placeholder='Coupon Code'  className='p-2 me-3'/>
 <button className='btn btn-danger p-2 my-3'>Apply Coupon</button>
@@ -78,7 +82,7 @@ const Cart = () => {
   <Link  to={{ pathname: '/checkout', state: { cartItems } }}> <button className='btn btn-danger my-3'>Procees to checkout</button> </Link>
 </div>
 </div>
-      </div>
+      </div> */}
 
        
 
